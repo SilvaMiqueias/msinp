@@ -200,12 +200,7 @@ export default {
  .header-mobile img{
      width: 100%;
  }
-
- .side{
-     padding: 20px;
-     background: red !important;
- }
-
+ 
  a{
      text-decoration: none;
  }
