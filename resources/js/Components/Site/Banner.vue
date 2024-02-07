@@ -1,5 +1,5 @@
 <template>
-   <section>
+   <section class="p-t-30 p-b-30">
        <n-carousel autoplay>
            <img
                class="carousel-img"
@@ -11,7 +11,10 @@
            >
        </n-carousel>
    </section>
-   <section class="mt-4 mb-4 container">
+   <section class="container p-b-30">
+
+       <h1 class="mb-4 mt-3 card-title text-center" style="font-size:30px !important;">Produtos e Serviços</h1>
+
        <div class="content-card">
            <div class="card" style="">
                <div class="card-body">
@@ -85,8 +88,10 @@ html {
 
 .card {
     //flex: 1 1 auto;
-    padding: 20px;
-    width: 18rem;
+    padding: 30px;
+    border:none;
+    background-color: #F5FFFA;
+    //width: 18rem;
     @media (max-width: 800px) {
         width: 100%;
     }
@@ -94,7 +99,7 @@ html {
 
 .card-body{
     display: grid;
-    gap: 20px;
+    gap: 30px;
     div,h5, p {
         margin-bottom: 0;
         padding: 0;
@@ -114,6 +119,13 @@ i{
     border-radius: 10px;
 }
 
+.p-b-30{
+    padding-bottom: 32px;
+}
+
+.p-t-30{
+    padding-top: 32px;
+}
 
 
 </style>

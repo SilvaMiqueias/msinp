@@ -6,7 +6,7 @@
         </n-notification-provider>
         <dialog-email></dialog-email>
         <router-view class="router-view"></router-view>
-        <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+        <a href="https://api.whatsapp.com/message/DK27BKXC6RU7K1?autoload=1&app_absent=0" class="float" target="_blank">
             <i class="pi pi-whatsapp my-float"></i>
         </a>
         <Footer/>

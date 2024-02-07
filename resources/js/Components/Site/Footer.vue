@@ -1,26 +1,52 @@
 <template xmlns="http://www.w3.org/1999/html">
   <section>
       <div class="footer">
-          <footer class="py-3 my-4">
-              <ul class="nav justify-content-center  border-bottom pb-3 mb-3">
-                  <li class="nav-item">
-                      <router-link class="router-link nav-link px-2 text-muted" to="/">Inicio</router-link>
-                  </li>
-                  <li class="nav-item">
-                      <router-link class="router-link nav-link px-2 text-muted" to="/about">Sobre</router-link>
-                  </li>
-                  <li class="nav-item">
-                      <router-link class="router-link nav-link px-2 text-muted" to="/contact">Contato</router-link>
-                  </li>
-              </ul>
-              <p class="text-center text-muted">@ 2024 company, Inc</p>
-          </footer>
+          <div class="container py-4 py-lg-5">
+              <div class="row row-cols-2 justify-center row-cols-md-4">
+                  <div  class="col-12 col-md-3">
+                      <h1 class="title">menu</h1>
+                      <div class="itens mt-2">
+                          <router-link class="router-link  text-muted" to="/">Inicio</router-link>
+                          <router-link class="router-link  text-muted" to="/about">Sobre</router-link>
+                          <router-link class="router-link  text-muted" to="/contact">Contato</router-link>
+                      </div>
+                  </div>
+                  <div class="col-12 col-md-3">
+                      <h1 class="title">Contato</h1>
+                      <div class="itens mt-2">
+                          <a href="https://api.whatsapp.com/message/DK27BKXC6RU7K1?autoload=1&app_absent=0" target="_blank"><span class="pi pi-whatsapp"></span> (62) 9124-7722</a>
+                          <a @click="openDialog"><span class="pi pi-envelope"></span> megainsp@gmail.com</a>
+                      </div>
+                  </div>
+              </div>
+              <hr class="mt-1 mb-1" style="background-color: #FFFFFF"/>
+              <p class="text-center text-muted">@ {{year}} MegaInsp</p>
+          </div>
+
       </div>
   </section>
 </template>
 
 <script>
-export default {}
+import {ref} from "vue";
+
+export default {
+
+    data(){
+
+        return {year: ref( new Date().getFullYear())}
+    },
+
+    methods: {
+        openDialog() {
+            this.$store.dispatch('openDialog', true);
+        },
+        getYear(){
+
+        }
+    }
+
+}
 </script>
 
 <style scoped>
@@ -29,6 +55,12 @@ export default {}
      color: #FFFFFF;
      clear: both;
      padding: 20px;
+ }
+
+ .title{
+     font-size:20px;
+     color: #FFFFFF;
+     font-weight: 900;
  }
 
  .footer .nav-link {
@@ -41,4 +73,25 @@ export default {}
  .text-owner{
      padding-top: 10px;
  }
+
+ .itens{
+     display: grid;
+     gap: 8px;
+ }
+
+ .itens a{
+     text-decoration: none;
+     display: flex;
+     gap: 10px;
+     color: #FFFFFF;
+     align-items: baseline;
+     cursor: pointer;
+ }
+
+ .router-link{
+     padding: 0 !important;
+     text-decoration: none;
+     color: #FFFFFF !important;
+ }
+
 </style>

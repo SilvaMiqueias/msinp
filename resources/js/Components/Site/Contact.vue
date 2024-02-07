@@ -1,5 +1,5 @@
 <template>
-    <div style="background-color: #F0FFFF">
+    <div class="p-b-30 p-t-30">
         <h1 class="text-center title">Estamos esperando o seu contato</h1>
 
         <div class="context row">
@@ -52,6 +52,14 @@ export default {
 .image img{
     height: 30%;
     width: 100%;
+}
+
+.p-b-30{
+    padding-bottom: 32px;
+}
+
+.p-t-30{
+    padding-top: 32px;
 }
 
 

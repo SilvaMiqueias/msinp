@@ -16,8 +16,8 @@ const form = useForm({
 form.setError({
     name: 'O campo nome é obrigatório.',
     email: 'O campo email é obrigatório.',
-    phone: 'O campo fone é obrigatório.',
-    description: 'O campo descrição é obrigatório.'
+    phone: 'O campo telefone é obrigatório.',
+    description: 'O campo assunto é obrigatório.'
 });
 
 form.defaults({
@@ -47,7 +47,7 @@ function submit() {
             store.dispatch('startMessage', {saverity: 'success', context: 'Deu certo!'});
             form.reset();
             emit('cancel');
-            toast.add({ severity: 'success', summary: 'Sucesso', detail: 'Orçamento enviado!', life: 3000 });
+            toast.add({ severity: 'success', summary: 'Mensagem Enviada!', detail: 'Em breve entraremos em contato!', life: 3000 });
         },
         onError:() => {
             store.dispatch('startMessage', {saverity: 'error', context: 'Ocorreu um erro ao enviar as informações!'});

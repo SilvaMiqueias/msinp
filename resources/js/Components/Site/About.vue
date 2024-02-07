@@ -1,7 +1,7 @@
 <template>
     <div class="container">
 <!--        <h1 class="title">Serviços</h1>-->
-        <section>
+        <section class="p-t-30 p-b-30">
                     <n-carousel
                         effect="card"
                         prev-slide-style="transform: translateX(-150%) translateZ(-800px);"
@@ -22,61 +22,35 @@
                     </template>
                 </n-carousel>
         </section>
-        <section class="mt-3 mb-3">
-            <n-layout has-sider>
-                <n-layout-sider
-                    collapse-mode="transform"
-                    :collapsed-width="20"
-                    :width="400"
-                    show-trigger="arrow-circle"
-                    content-style="padding: 24px;"
-                    bordered
-                >
-                    <div class="col-md-12 content" v-if="!$isMobile()">
-                        <ul>
-                            <li v-for="(item, i) in images" v-bind:class="(index === i) ? 'active' : '' " >
-                                <a @click="(index = i)">{{item.name}}</a>
-                                <n-divider style="margin-top: 0; margin-bottom: 0;"/>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-12 content" v-else>
-                        <select class="custom-select" v-model="index">
-                            <option v-for="(item, i) in images" v-bind:value="i">{{item.name}}</option>
-                        </select>
-                    </div>
-                </n-layout-sider>
-                <n-layout-content content-style="padding: 24px;">
-                    <div class="container content">
-                        <h1 class="title">{{images[index].name}}</h1>
-                        <div class="context">
-                            <div class="col-md-9 text">
-                                <h1 class="text-center sub-title">{{images[index].title}}</h1>
-                                <n-collapse default-expanded-names="0" accordion>
-                                    <n-collapse-item title="Saiba Mais" name="1">
-                                        <div>{{images[index].description}}</div>
-                                    </n-collapse-item>
-                                </n-collapse>
-
-
-<!--                                <n-space vertical>-->
-<!--                                    <n-switch v-model:value="show">-->
-<!--                                        <template #checked>-->
-<!--                                            Fechar-->
-<!--                                        </template>-->
-<!--                                        <template #unchecked style="color: #BF0811; font-weight: 900" class="btn-red">-->
-<!--                                            <p class="btn-red">Saiba Mais</p>-->
-<!--                                        </template>-->
-<!--                                    </n-switch>-->
-<!--                                    <n-collapse-transition :show="show">-->
-<!--                                        <div>{{images[index].description}}</div>-->
-<!--                                    </n-collapse-transition>-->
-<!--                                </n-space>-->
-                            </div>
-                        </div>
-                    </div>
-                </n-layout-content>
-            </n-layout>
+        <section class="p-b-30">
+                  <div class="row">
+                      <div class="col col-md-3 content" v-if="!$isMobile()">
+                          <ul>
+                              <li v-for="(item, i) in images" v-bind:class="(index === i) ? 'active' : '' " >
+                                  <a @click="(index = i)">{{item.name}}</a>
+                                  <n-divider style="margin-top: 0; margin-bottom: 0;"/>
+                              </li>
+                          </ul>
+                      </div>
+                      <div class="col-md-12 content" v-else>
+                          <select class="custom-select" v-model="index">
+                              <option v-for="(item, i) in images" v-bind:value="i">{{item.name}}</option>
+                          </select>
+                      </div>
+                      <div class="container content col col-md-9">
+                          <h1 class="title">{{images[index].name}}</h1>
+                          <div class="context">
+                              <div class="text">
+                                  <h1 class="sub-title">{{images[index].title}}</h1>
+                                  <n-collapse default-expanded-names="0" accordion>
+                                      <n-collapse-item title="Saiba Mais" name="1">
+                                          <div>{{images[index].description}}</div>
+                                      </n-collapse-item>
+                                  </n-collapse>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
         </section>
     </div>
 </template>
@@ -204,7 +178,7 @@ const images =
     font-size:20px;
     font-weight: 700;
     color: #BF0811;
-    text-align: center;
+    text-align: justify;
     padding: 10px
 }
 
@@ -249,7 +223,7 @@ const images =
 .content li:hover{
     border-left: 3px solid #BF0811;
     color: #BF0811 !important;
-    background-color:  #f0f8ff;
+    background-color: #F0FDFA;
 }
 
 .content li:focus{
@@ -268,7 +242,7 @@ const images =
     border: none;
     border-left: 3px solid #BF0811;
     color: #BF0811 !important;
-    background-color:  #f0f8ff;
+    background-color: #F0FDFA;
 }
 
 .active a{
@@ -290,6 +264,14 @@ const images =
 .btn-red{
     color: #BF0811 !important;
     font-weight: 900;
+}
+
+.p-b-30{
+    padding-bottom: 32px;
+}
+
+.p-t-30{
+    padding-top: 32px;
 }
 
 </style>

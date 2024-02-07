@@ -2,7 +2,7 @@
     <header>
       <div v-if="$isMobile()">
           <div class="card flex">
-              <Sidebar  v-model:visible="visible" header="" :pt="sidebar">
+              <Sidebar  v-model:visible="visible" header="" style="padding: 20px"  :pt="sidebar">
                   <template  style="background-color: #FFFFFF"  #header>
                           <div class="header-mobile ml-3">
                               <img src="../../../../public/image/site/logo_04_megainsp.png" id="logo">
@@ -13,19 +13,25 @@
                           <li>
                               <a style="text-decoration: none" v-ripple class="flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
                                   <i class="pi pi-home mr-2 route-active"></i>
-                                  <router-link class="router-link" to="/">Inicio</router-link>
+                                  <router-link class="route-active-mobile" to="/">Inicio</router-link>
                               </a>
+                          </li>
+                          <li class="break">
+                              <hr>
                           </li>
                           <li>
                               <a style="text-decoration: none" v-ripple class="flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
                                   <i class="pi pi-info mr-2 route-active"></i>
-                                  <router-link class="router-link" to="/about">Sobre</router-link>
+                                  <router-link class="route-active-mobile" to="/about">Sobre</router-link>
                               </a>
+                          </li>
+                          <li class="break">
+                              <hr>
                           </li>
                           <li>
                               <a style="text-decoration: none" v-ripple class="flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
                                   <i class="pi pi-phone mr-2 route-active"></i>
-                                  <router-link class="router-link" to="/contact">Contato</router-link>
+                                  <router-link class="route-active-mobile" to="/contact">Contato</router-link>
                               </a>
                           </li>
                   </ul>
@@ -45,7 +51,7 @@
                    <h1>FALE CONOSCO E AGENDE UM ATENDIMENTO PERSONALIZADO </h1>
                    <div>
                        <a @click="openDialog"><span class="pi pi-envelope"></span> megainsp@gmail.com</a>
-                       <a href=""><span class="pi pi-whatsapp"></span> (62) 99124-7722 </a>
+                       <a href="https://api.whatsapp.com/message/DK27BKXC6RU7K1?autoload=1&app_absent=0" target="_blank"><span class="pi pi-whatsapp"></span> (62) 99124-7722 </a>
                    </div>
                </div>
            </div>
@@ -114,11 +120,12 @@ export default {
  }
 
  .route-active-mobile{
-     color: #ae510f !important;
+     color: #ED1B23 !important;
  }
 
  .route-active{
      color: #BF0811 !important;
+     font-weight: 900;
  }
 
  .logos{
@@ -193,6 +200,15 @@ export default {
 
  .header-mobile img{
      width: 100%;
+ }
+
+ .side{
+     padding: 20px;
+     background: red !important;
+ }
+
+ a{
+     text-decoration: none;
  }
 
 </style>

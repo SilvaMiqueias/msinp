@@ -1,5 +1,5 @@
 <template>
-    <Dialog v-model:visible="visible" key="dialogRef" @update:visible="closed"  :close-on-escape="false"   modal header="Agende Um Atendimento Personalizado"  :style="{ width: '50rem' }" :breakpoints="{ '1199px': '60vw', '575px': '60vw' }">
+    <Dialog v-model:visible="visible" key="dialogRef" @update:visible="closed"  :close-on-escape="false"   modal header="Agende Um Atendimento Personalizado"  :style="{ width: '50rem' }" >
         <form-email @cancel="closed"/>
     </Dialog>
 </template>
