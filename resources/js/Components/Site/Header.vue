@@ -46,7 +46,6 @@
        <div v-else>
            <div class="logos">
                <img src="../../../../public/image/site/logo02megainsp.png" id="logo">
-               <!--            <img src="../../../../public/image/site/tarjeta_megainsp.png" id="target-logo">-->
                <div class="target-logo">
                    <h1>FALE CONOSCO E AGENDE UM ATENDIMENTO PERSONALIZADO </h1>
                    <div>
