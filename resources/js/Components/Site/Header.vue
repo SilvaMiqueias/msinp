@@ -22,7 +22,7 @@
                           <li>
                               <a style="text-decoration: none" v-ripple class="flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
                                   <i class="pi pi-info mr-2 route-active"></i>
-                                  <router-link class="route-active-mobile" to="/about">Sobre</router-link>
+                                  <router-link class="route-active-mobile" to="/servico">Serviços</router-link>
                               </a>
                           </li>
                           <li class="break">
@@ -31,7 +31,7 @@
                           <li>
                               <a style="text-decoration: none" v-ripple class="flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
                                   <i class="pi pi-phone mr-2 route-active"></i>
-                                  <router-link class="route-active-mobile" to="/contact">Contato</router-link>
+                                  <router-link class="route-active-mobile" to="/contato">Contato</router-link>
                               </a>
                           </li>
                   </ul>
@@ -61,8 +61,8 @@
                    </a>
                    <div class="links mr-2">
                        <router-link class="router-link" to="/">Inicio</router-link>
-                       <router-link class="router-link" to="/about">Sobre</router-link>
-                       <router-link class="router-link" to="/contact">Contato</router-link>
+                       <router-link class="router-link" to="/servico">Serviços</router-link>
+                       <router-link class="router-link" to="/contato">Contato</router-link>
                    </div>
                </nav>
            </div>
@@ -94,6 +94,12 @@ export default {
 </script>
 
 <style scoped>
+
+.card{
+    background-color: transparent !important;
+    border: none !important;
+}
+
  header{
      background-color: #ffffff;
  }
@@ -177,6 +183,7 @@ export default {
      justify-content: space-between;
      align-items: center;
      padding: 10px;
+     background-color: transparent;
  }
 
  .menu-mobile img{
@@ -200,7 +207,7 @@ export default {
  .header-mobile img{
      width: 100%;
  }
- 
+
  a{
      text-decoration: none;
  }

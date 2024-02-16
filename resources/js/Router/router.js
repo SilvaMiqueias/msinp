@@ -10,8 +10,8 @@ const router = createRouter({
     linkActiveClass: 'route-active',
     routes: [
         {path: '/', component: Section},
-        {path: '/about', component: About},
-        {path: '/contact', component: Contact}
+        {path: '/servico', component: About},
+        {path: '/contato', component: Contact}
     ],
 });
 

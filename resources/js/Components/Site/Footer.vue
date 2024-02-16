@@ -7,8 +7,8 @@
                       <h1 class="title">menu</h1>
                       <div class="itens mt-2">
                           <router-link class="router-link  text-muted" to="/">Inicio</router-link>
-                          <router-link class="router-link  text-muted" to="/about">Sobre</router-link>
-                          <router-link class="router-link  text-muted" to="/contact">Contato</router-link>
+                          <router-link class="router-link  text-muted" to="/servico">Serviços</router-link>
+                          <router-link class="router-link  text-muted" to="/contato">Contato</router-link>
                       </div>
                   </div>
                   <div class="col-12 col-md-3">
