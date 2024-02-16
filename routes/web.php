@@ -27,11 +27,11 @@ Route::get('/', function () {
     return Inertia::render('Site/Home');
 });
 
-Route::get('/about', function () {
+Route::get('/servico', function () {
     return Inertia::render('Site/Home');
 });
 
-Route::get('/contact', function () {
+Route::get('/contato', function () {
     return Inertia::render('Site/Home');
 });
 

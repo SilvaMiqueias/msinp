@@ -37,6 +37,12 @@ export default {
     padding: 5% 10%;
 }
 
+.row{
+    @media (max-width: 800px) {
+        gap: 32px;
+    }
+}
+
 .context .title{
     font-size: 18px;
     font-weight: 900;
